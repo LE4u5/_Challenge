@@ -18,7 +18,7 @@ def validate_card(array):
             continue
         if "-" in card_num:
         # validates numbers with hyphens then removes them
-            result = re.search("^([1-9]{4}\-){3}[1-9]{4}", card_num)
+            result = re.search("^([0-9]{4}\-){3}[0-9]{4}", card_num)
             if result:
                 card_num = re.sub("\-","",card_num)
             if not result:
